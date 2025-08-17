@@ -108,3 +108,33 @@ BEGIN
   CLOSE emp_cursor;
 END;
 /
+
+-- %TYPE
+
+DECLARE
+  v_id     employees.employee_id%TYPE;
+  v_name   employees.first_name%TYPE;
+  v_salary employees.salary%TYPE;
+BEGIN
+  SELECT employee_id, first_name, salary
+  INTO v_id, v_name, v_salary
+  FROM employees
+  WHERE employee_id = 1;
+
+  DBMS_OUTPUT.PUT_LINE('ID: ' || v_id || ' | Name: ' || v_name || ' | Salary: ' || v_salary);
+END;
+/
+
+-- %ROWTYPE
+
+DECLARE
+  v_emp employees%ROWTYPE;
+BEGIN
+  SELECT *
+  INTO v_emp
+  FROM employees
+  WHERE employee_id = 1;
+
+  DBMS_OUTPUT.PUT_LINE('ID: ' || v_emp.employee_id || ' | Name: ' || v_emp.first_name || ' | Salary: ' || v_emp.salary);
+END;
+/
