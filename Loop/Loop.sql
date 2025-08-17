@@ -122,3 +122,55 @@ The outer FOR loop (FOR outer_counter IN 1..3 LOOP) runs three times.
 Inside the outer FOR loop, there is an inner FOR loop (FOR inner_counter IN 1..2 LOOP) that runs two times for each iteration of the outer loop.
 DBMS_OUTPUT.PUT_LINE statements is used to print output.
 */
+
+-- PL/SQL While Loop
+
+/*WHILE condition
+LOOP
+   -- Statements to be executed as long as the condition is true
+END LOOP;
+*/
+
+-- Examples of PL/SQL WHILE Loop
+
+-- Example 1: Using PL/SQL WHILE Loop for Iterative Execution
+
+DECLARE
+   counter NUMBER := 1;  -- Initialize a counter variable
+BEGIN
+   -- Start the WHILE loop
+   WHILE counter <= 5  -- Condition to check
+   LOOP
+      -- Statements to be executed as long as the condition is true
+      DBMS_OUTPUT.PUT_LINE('Counter value: ' || counter);
+      
+      -- Increment the counter
+      counter := counter + 1;
+   END LOOP;  -- End of the loop
+END;
+/
+
+-- Example 2: Using EXIT WHEN for Loop Termination
+
+DECLARE
+   total_sum NUMBER := 0;  -- Initialize a variable to store the sum
+   current_number NUMBER := 1;  -- Initialize a variable for the loop
+BEGIN
+   -- Start the WHILE loop with EXIT WHEN statement
+   WHILE total_sum < 10
+   LOOP
+      -- Add the current number to the total sum
+      total_sum := total_sum + current_number;
+
+      -- Display the current state
+      DBMS_OUTPUT.PUT_LINE('Current Number: ' || current_number);
+      DBMS_OUTPUT.PUT_LINE('Total Sum: ' || total_sum);
+      
+      -- Increment the current number
+      current_number := current_number + 1;
+
+      -- Exit the loop when the total sum exceeds or equals 10
+      EXIT WHEN total_sum >= 10;
+   END LOOP;  -- End of the loop
+END;
+/
