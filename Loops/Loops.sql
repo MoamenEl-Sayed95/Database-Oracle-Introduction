@@ -174,3 +174,117 @@ BEGIN
    END LOOP;  -- End of the loop
 END;
 /
+
+-- PL/SQL For Loop
+
+/*
+FOR LOOP in PL/SQL
+Along with SQL queries PL/SQL supports looping. 
+FOR loop is a type of control statement. 
+It is used to perform repetitive tasks. 
+It is used to execute the set of statements for a specific number of times. 
+To execute for loop, start and end values are provided. 
+During each iteration counter is incremented by 1.
+*/
+
+-- Syntax
+
+DECLARE
+        --declare loop variable and provide its datatype
+loop_varaible datatype;
+BEGIN
+        --for loop with start and end value
+FOR loop_variable in start_value .. end_value LOOP
+set of statements 
+END LOOP;
+END;
+/
+
+-- Example: Print Number From 1 to 5 Using FOR Loop in PL/SQL
+
+SET SERVEROUTPUT ON;
+DECLARE
+counter NUMBER;
+BEGIN
+DBMS_OUTPUT.PUT_LINE('PL/SQL FOR LOOP EXECUTION');
+FOR counter IN 1..5 LOOP
+    DBMS_OUTPUT.PUT_LINE('COUNTER VALUE: '|| counter);
+END LOOP;
+END;
+/
+
+https://media.geeksforgeeks.org/wp-content/uploads/20240113215227/PLSQL-FOR-LOOP.jpeg
+
+-- PL/SQL NESTED FOR LOOP
+
+/*
+PL/SQL supports nested for loop.
+The nested for loop contains an outer loop and one or more inner loop.
+For each increment of the loop variable , of the outer loop, the inner loops executes the set of statements within it for a specific number of times.
+This process repeats until loop variable of outer loop reaches its end value.
+Nested for loops are used for executing complex operations, designing patterns, and many more operations.
+*/
+
+-- Syntax
+
+BEGIN
+          --outer loop 
+FOR loop_variable1 IN start_value1 ..end_value1 LOOP
+          --inner loop
+FOR  loop_variable2 IN start_value2 ..end_value2 LOOP
+          --set of statements 
+END LOOP;
+          --inner loop end
+END LOOP;
+          --outer loop end
+END;
+/
+
+-- Example: Using Nested FOR Loops to Print a Pattern
+
+-- In this example, we will print the numbers 1, 2, and 3 in a pattern using nested loops.
+
+SET SERVEROUTPUT ON;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('PL/SQL NESTED FOR LOOP EXECUTION');
+    FOR counter IN 1..3 LOOP
+        FOR counter1 IN 1..3 LOOP
+            DBMS_OUTPUT.PUT( counter1);
+        END LOOP;
+        DBMS_OUTPUT.NEW_LINE;
+    END LOOP;
+END;
+/
+
+https://media.geeksforgeeks.org/wp-content/uploads/20240113225354/PLSQL-NESTED-FOR-LOOP.jpeg
+
+-- Using the REVERSE Keyword in a PL/SQL FOR Loop
+
+/* 
+Reverse keyword is used in FOR loop to iterate from end value to start value.
+REVERSE keyword is mentioned before the start value.
+*/
+
+-- Syntax
+
+BEGIN
+FOR loop_variable IN REVERSE start_value .. end_value  LOOP
+    set_of_statements
+END LOOP;
+END;
+/
+
+-- Example: Print Number From 5 to 1 Using the REVERSE Keyword
+
+SET SERVEROUTPUT ON;
+DECLARE
+counter NUMBER;
+BEGIN
+DBMS_OUTPUT.PUT_LINE('FOR LOOP WITH REVERSE KEYWORD');
+FOR counter IN REVERSE 1..5 LOOP
+    DBMS_OUTPUT.PUT_LINE('REVERSE VALUE: '|| counter);
+END LOOP;
+END;
+/
+
+https://media.geeksforgeeks.org/wp-content/uploads/20240113234915/FOR-LOOP-WITH-REVERSE-KEYWORD.jpeg
