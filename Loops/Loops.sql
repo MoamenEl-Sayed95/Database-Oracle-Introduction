@@ -21,6 +21,8 @@ LOOP
    END IF;
 END LOOP;
 
+-----------------------------------------------
+
 -- Example of PL/SQL LOOP with Conditional EXIT
 
 DECLARE
@@ -44,6 +46,8 @@ Inside the loop, DBMS_OUTPUT.PUT_LINE is used to print Iteration number (value o
 The counter is incremented by 1 in each iteration.
 IF statement is executed when the value of counter will become 3 and The EXIT statement is executed and loop stops.
 */
+
+---------------------------------------------------------------------
 
 -- EXIT WHEN Statement
 
@@ -81,6 +85,8 @@ The counter is incremented by 1 in each iteration.
 The EXIT WHEN statement is executed when the loop when the counter exceeds 5.
 
 */
+
+---------------------------------------------------------------------
 
 -- Nested Loops
 
@@ -127,6 +133,8 @@ The outer FOR loop (FOR outer_counter IN 1..3 LOOP) runs three times.
 Inside the outer FOR loop, there is an inner FOR loop (FOR inner_counter IN 1..2 LOOP) that runs two times for each iteration of the outer loop.
 DBMS_OUTPUT.PUT_LINE statements is used to print output.
 */
+
+---------------------------------------------------------------------
 
 /*
 =======================
@@ -228,6 +236,7 @@ END;
 /
 
 https://media.geeksforgeeks.org/wp-content/uploads/20240113215227/PLSQL-FOR-LOOP.jpeg
+
 
 -- PL/SQL NESTED FOR LOOP
 
