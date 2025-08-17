@@ -1,4 +1,9 @@
--- PL/SQL Loops
+/*
+==================
+-- PL/SQL Loops --
+==================
+*/
+
 https://media.geeksforgeeks.org/wp-content/uploads/20230424101737/continue-in-C.webp
 
 -- Syntax
@@ -123,7 +128,11 @@ Inside the outer FOR loop, there is an inner FOR loop (FOR inner_counter IN 1..2
 DBMS_OUTPUT.PUT_LINE statements is used to print output.
 */
 
--- PL/SQL While Loop
+/*
+=======================
+-- PL/SQL While Loop --
+=======================
+*/
 
 /*WHILE condition
 LOOP
@@ -175,7 +184,12 @@ BEGIN
 END;
 /
 
--- PL/SQL For Loop
+/*
+=====================
+-- PL/SQL For Loop --
+=====================
+*/
+
 
 /*
 FOR LOOP in PL/SQL
