@@ -61,9 +61,9 @@ The trigger is specified first and then the action statement are specified later
 
 CREATE OR REPLACE TRIGGER trigger_name
 
-BEFORE or AFTER or INSTEAD OF                      //trigger timings 
+BEFORE or AFTER or INSTEAD OF     -- trigger timings 
 
-INSERT  or UPDATE or  DELETE                          // Operation to be performed 
+INSERT  or UPDATE or  DELETE      -- Operation to be performed 
 
 of column_name
 
