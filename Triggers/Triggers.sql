@@ -249,3 +249,9 @@ https://media.geeksforgeeks.org/wp-content/uploads/20240121194512/Conditional-Tr
 In conclusion, Oracle PL/SQL triggers offer a powerful way to automate actions before or after specified events, such as INSERT, UPDATE or DELETE, on a table.
 By executing custom code, handling exceptions, and enforcing business rules, triggers improve database performance and data integrity.
 */
+
+-- Enabling and Disabling - Dropping Triggers
+
+ALTER TRIGGER <trigger_name> DISABLE / ENABLE
+
+DROP TRIGGER trigger_name
